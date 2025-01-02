@@ -1,12 +1,18 @@
-[project]
+[tool.poetry]
 name = "workshop-python-aula19"
 version = "0.1.0"
-description = "Add your description here"
+description = ""
+authors = ["Thiago Ferraz <thiagovdferraz@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "fastapi>=0.115.6",
-    "pydantic>=2.10.4",
-    "sqlalchemy>=2.0.36",
-    "uvicorn[standard]>=0.34.0",
-]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.6"
+pydantic = "^2.10.4"
+sqlalchemy = "^2.0.36"
+uvicorn = {extras = ["standard"], version = "^0.34.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
