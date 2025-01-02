@@ -1,9 +1,9 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, PositiveInt, PositiveFloat
 from typing import Union
 
 class ItemBase(BaseModel):
     name: str
-    price: float
+    price: PositiveFloat
     is_offer: Union[bool, None] = None
 
 class ItemCreate(ItemBase):
